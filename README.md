@@ -12,7 +12,7 @@ Esta es una API REST para gestionar usuarios, construida con FastAPI y SQLite.
 
 # Clonar el repositorio
 
-git clone <https://github.com/juanzmijak/ABM)>
+git clone <https://github.com/juanzmijak/ABM>
 cd abm
 
 # Crear y activar el entorno virtual
