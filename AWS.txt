@@ -1,0 +1,73 @@
+A continuación se podrán oberservar los servicios que utilizaría para desplegar esta aplicación en AWS: 
+
+- Amazon EC2: Para ejecutar la aplicación FastAPI.
+- Amazon RDS: Para la base de datos SQLite o una alternativa como PostgreSQL.
+- Amazon S3: Para almacenar archivos estáticos y de medios, si los hubiera.
+- Amazon VPC: Para configurar una red virtual aislada.
+- Elastic Load Balancing (ELB): Para distribuir el tráfico a las instancias EC2.
+- AWS Auto Scaling: Para escalar automáticamente las instancias EC2 basadas en la demanda.
+- AWS CloudFormation: Para definir y provisionar la infraestructura como código.
+- AWS IAM: Para gestionar permisos y roles de usuario.
+- AWS Secrets Manager: Para almacenar y gestionar secretos como API keys.
+- AWS CloudWatch: Para monitoreo y logging.
+- AWS WAF: Para proteger la aplicación contra amenazas comunes de web.
+
+
+Creación de la Infraestructura: 
+
+-- Configuración de VPC:
+Crear una VPC con subredes públicas y privadas.
+Configurar las tablas de enrutamiento y gateways necesarios.
+
+--Configuración de RDS:
+Crear una instancia de RDS (PostgreSQL) en subredes privadas.
+Configurar el acceso y las políticas de seguridad para la instancia de RDS.
+
+-- Configuración de EC2:
+
+Crear un grupo de Auto Scaling para las instancias EC2.
+Usar una AMI preconfigurada con Python, FastAPI y otros requisitos.
+Configurar el Elastic Load Balancer (ELB) para distribuir el tráfico a las instancias EC2.
+Asegurarse de que las instancias EC2 están en subredes públicas con acceso a Internet.
+
+-- Configuración de S3:
+Crear un bucket de S3 para almacenar archivos estáticos y de medios.
+Configurar permisos y políticas adecuadas para el bucket.
+
+-- Configuración de IAM:
+Crear roles y políticas para las instancias EC2 para acceder a S3, RDS, Secrets Manager, etc.
+Asegurar que los usuarios tengan permisos mínimos necesarios.
+
+-- Configuración de Secrets Manager:
+Almacenar secretos como la API key y las credenciales de la base de datos en AWS Secrets Manager.
+Configurar las instancias EC2 para acceder a estos secretos.
+
+-- Implementación de CloudWatch:
+Configurar CloudWatch para monitorear logs y métricas de las instancias EC2 y la base de datos RDS.
+Configurar alarmas para notificar sobre cualquier problema.
+
+-- Puntos a tener en cuenta de Seguridad:
+
+- IAM:
+Usar roles y políticas para otorgar permisos mínimos necesarios.
+Habilitar Multi-Factor Authentication (MFA) para todas las cuentas de usuario.
+
+- VPC:
+Asegurar que las subredes privadas están adecuadamente aisladas.
+Configurar grupos de seguridad para restringir el acceso.
+
+- Secrets Manager:
+Almacenar y rotar credenciales y secretos regularmente.
+
+- CloudWatch:
+Monitorear logs y métricas.
+Configurar alarmas para alertar sobre cualquier actividad sospechosa.
+
+- WAF:
+Implementar reglas de AWS WAF para proteger contra amenazas comunes como SQL injection, XSS, Path Traversal, Size restriction, entre otras. 
+
+- HTTPS:
+Usar Amazon Certificate Manager (ACM) para gestionar certificados SSL/TLS y asegurar la comunicación.
+
+- Backups:
+Configurar backups automáticos para la base de datos RDS.
