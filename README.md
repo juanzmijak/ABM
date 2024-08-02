@@ -42,7 +42,8 @@ python app/models.py
 
 **Ejecutar la aplicación**
 
-bash
+bash <>
+
 
 uvicorn app.main:app --reload
 
