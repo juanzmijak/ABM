@@ -9,5 +9,5 @@ def verify_tables():
         tables = cursor.fetchall()
         print("Tablas en la base de datos:", tables)
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     verify_tables()
