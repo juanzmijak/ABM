@@ -6,7 +6,7 @@ Esta es una API REST para gestionar usuarios, construida con FastAPI y SQLite.
 
 Python 3.8+
 Docker (para ejecutar en contenedor)
-Git
+
 
 **Instalación 💻**
 
