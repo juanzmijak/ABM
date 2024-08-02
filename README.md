@@ -11,27 +11,49 @@ Git
 Instalación 💻
 
 Clonar el repositorio
-bash
+
+bash <>
+
 git clone https://github.com/juanzmijak/ABM
+
 cd abm
+
 Crear y activar el entorno virtual
-bash
+
+bash <>
+
 python3 -m venv venv
+
 source venv/bin/activate  # En macOS/Linux
+
 .\venv\Scripts\activate  # En Windows
+
 Instalar las dependencias
-bash
+
+bash <>
+
 pip install -r requirements.txt
+
 Inicializar la base de datos
-bash
+
+bash <>
+
 python app/models.py
+
 Ejecutar la aplicación
+
 bash
+
 uvicorn app.main:app --reload
+
 Endpoints 📡
+
 Crear un nuevo usuario
+
 Endpoint: POST /users/
+
 Descripción: Crea un nuevo usuario.
+
 Ejemplo de solicitud (usando cURL):
 
 bash <>
@@ -101,10 +123,17 @@ docker run -d -p 8000:8000 abm
 La API estará disponible en http://127.0.0.1:8000.
 
 Nuevas funcionalidades a futuro 🌟
-Pagos y facturación de usuarios.
-Integración con servicios de mensajería y notificaciones a los usuarios sobre pagos y facturación.
-Generación de informes y estadísticas de usuarios.
+
+- Pagos y facturación de usuarios.
+
+- Integración con servicios de mensajería y notificaciones a los usuarios sobre pagos y facturación.
+
+- Generación de informes y estadísticas de usuarios.
+
 Recomendaciones de seguridad 🔒
-Usar HTTPS en producción.
-Implementar límites de requests para proteger contra ataques de fuerza bruta.
-Monitoreo y alertas de seguridad críticas sobre acciones inusuales de usuarios.
+
+- Usar HTTPS en producción.
+
+- Implementar límites de requests para proteger contra ataques de fuerza bruta.
+- Monitoreo y alertas de seguridad críticas sobre acciones inusuales de usuarios.
+  
