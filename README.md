@@ -34,25 +34,39 @@ Endpoint: POST /users/
 Descripción: Crea un nuevo usuario.
 Ejemplo de solicitud (usando cURL):
 
-bash
+bash <>
+
 curl -X POST "http://127.0.0.1:8000/users/" -H "accept: application/json" -H "Content-Type: application/json" -H "access_token: mysecretapikey" -d '{ "nombre": "Juan", "apellido": "Zmijak", "direccion": "Av Libertador 1234", "telefono": "+1234567890", "edad": 28 }'
+
 Obtener usuarios por nombre
+
 Endpoint: GET /users/
+
 Descripción: Busca usuarios por nombre.
+
 Ejemplo de solicitud (usando cURL):
 
-bash
+bash <>
+
 curl -X GET "http://127.0.0.1:8000/users/?nombre=Juan" -H "accept: application/json" -H "access_token: mysecretapikey"
+
 Obtener un usuario por ID
+
 Endpoint: GET /users/{user_id}
+
 Descripción: Obtiene un usuario por ID.
+
 Ejemplo de solicitud (usando cURL):
 
-bash
+bash <>
+
 curl -X GET "http://127.0.0.1:8000/users/1" -H "accept: application/json" -H "access_token: mysecretapikey"
 Actualizar un usuario
+
 Endpoint: PUT /users/{user_id}
+
 Descripción: Actualiza un usuario existente.
+
 Ejemplo de solicitud (usando cURL):
 
 bash <>
