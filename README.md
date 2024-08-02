@@ -1,16 +1,16 @@
-ABM API 🚀
-
+**ABM API 🚀
+**
 Esta es una API REST para gestionar usuarios, construida con FastAPI y SQLite.
 
-Requisitos 🛠️
-
+**Requisitos 🛠️
+**
 Python 3.8+
 Docker (para ejecutar en contenedor)
 Git
 
-Instalación 💻
+**Instalación 💻**
 
-Clonar el repositorio
+**Clonar el repositorio**
 
 bash <>
 
@@ -18,7 +18,7 @@ git clone https://github.com/juanzmijak/ABM
 
 cd abm
 
-Crear y activar el entorno virtual
+**Crear y activar el entorno virtual**
 
 bash <>
 
@@ -28,27 +28,27 @@ source venv/bin/activate  # En macOS/Linux
 
 .\venv\Scripts\activate  # En Windows
 
-Instalar las dependencias
+**Instalar las dependencias**
 
 bash <>
 
 pip install -r requirements.txt
 
-Inicializar la base de datos
+**Inicializar la base de datos**
 
 bash <>
 
 python app/models.py
 
-Ejecutar la aplicación
+**Ejecutar la aplicación**
 
 bash
 
 uvicorn app.main:app --reload
 
-Endpoints 📡
+**Endpoints 📡**
 
-Crear un nuevo usuario
+**Crear un nuevo usuario**
 
 Endpoint: POST /users/
 
@@ -60,7 +60,7 @@ bash <>
 
 curl -X POST "http://127.0.0.1:8000/users/" -H "accept: application/json" -H "Content-Type: application/json" -H "access_token: mysecretapikey" -d '{ "nombre": "Juan", "apellido": "Zmijak", "direccion": "Av Libertador 1234", "telefono": "+1234567890", "edad": 28 }'
 
-Obtener usuarios por nombre
+**Obtener usuarios por nombre**
 
 Endpoint: GET /users/
 
@@ -72,7 +72,7 @@ bash <>
 
 curl -X GET "http://127.0.0.1:8000/users/?nombre=Juan" -H "accept: application/json" -H "access_token: mysecretapikey"
 
-Obtener un usuario por ID
+**Obtener un usuario por ID**
 
 Endpoint: GET /users/{user_id}
 
@@ -95,7 +95,7 @@ bash <>
 
 curl -X PUT "http://127.0.0.1:8000/users/1" -H "accept: application/json" -H "Content-Type: application/json" -H "access_token: mysecretapikey" -d '{ "nombre": "Juan", "apellido": "Zmijak", "direccion": "Av Libertador 1234", "telefono": "+1234567890", "edad": 28 }'
 
-Eliminar un usuario
+**Eliminar un usuario**
 
 Endpoint: DELETE /users/{user_id}
 Descripción: Elimina un usuario por ID.
@@ -106,15 +106,15 @@ bash <>
 
 curl -X DELETE "http://127.0.0.1:8000/users/1" -H "accept: application/json" -H "access_token: mysecretapikey"
 
-Ejecución en Docker 🐳
+**Ejecución en Docker 🐳**
 
-Construir la imagen de Docker:
+**Construir la imagen de Docker:**
 
 bash <>
 
 docker build -t abm .
 
-Ejecutar el contenedor:
+**Ejecutar el contenedor:**
 
 bash <>
 
@@ -122,7 +122,7 @@ docker run -d -p 8000:8000 abm
 
 La API estará disponible en http://127.0.0.1:8000.
 
-Nuevas funcionalidades a futuro 🌟
+**Nuevas funcionalidades a futuro 🌟**
 
 - Pagos y facturación de usuarios.
 
@@ -130,7 +130,7 @@ Nuevas funcionalidades a futuro 🌟
 
 - Generación de informes y estadísticas de usuarios.
 
-Recomendaciones de seguridad 🔒
+**Recomendaciones de seguridad 🔒**
 
 - Usar HTTPS en producción.
 
